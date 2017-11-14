@@ -1,6 +1,3 @@
-require 'database_cleaner'
-
-
 feature "adds links to bookmark manager" do
   scenario "prompts user to enter URL" do
     visit "/links/new"
@@ -22,6 +19,6 @@ feature "added links now appear in /links" do
     fill_in ("title"), with: "Linkedin"
     fill_in ("url"), with: "www.linkedin.com"
     click_button("Bookmark")
-    expect(page).to have_content("Linkedin", "www.linkedin.com")
+    expect(page).to have_content("Linkedin")
   end
 end

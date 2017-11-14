@@ -1,11 +1,10 @@
+ENV["RACK_ENV"] = 'test'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'database_cleaner'
 
 require File.dirname(__FILE__)+"/.."+"/app/app.rb"
-
-ENV['RACK_ENV'] = 'test'
 
 Capybara.app = BookmarkManager
 
@@ -27,7 +26,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
-     DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.clean_with(:truncation)
   end
 
   config.before(:each, type: :feature) do
