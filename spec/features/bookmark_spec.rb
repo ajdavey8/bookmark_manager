@@ -1,3 +1,5 @@
+require './app/models/link'
+
 feature 'see list of links' do
   scenario 'view the links on the homepage' do
     Link.create(
