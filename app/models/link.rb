@@ -8,10 +8,6 @@ class Link
   property :title, String
   property :url, Text
 
-  def double_id
-    self.id * 2
-  end
-
 end
 
 DataMapper::Logger.new(File.dirname(File.absolute_path(__FILE__))+'/log.txt', :debug)
