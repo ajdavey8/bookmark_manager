@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>URL</th>
+  </tr>
+<% @links.each do |link| %>
+<tr>
+  <td><%= link.id %></td>
+  <td><%= link.title %></td>
+  <td><%= link.url %></td>
+</tr>
+  <% end %>
+
+</table>
