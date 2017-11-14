@@ -1,3 +1,6 @@
+require 'database_cleaner'
+
+
 feature "adds links to bookmark manager" do
   scenario "prompts user to enter URL" do
     visit "/links/new"
